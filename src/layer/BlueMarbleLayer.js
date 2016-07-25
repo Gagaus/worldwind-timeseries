@@ -81,6 +81,7 @@ define([
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
         BlueMarbleLayer.prototype.prePopulate = function (wwd) {
+            console.log("prePopulating");
             if (!wwd) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "BlueMarbleLayer", "prePopulate", "missingWorldWindow"));
@@ -106,7 +107,7 @@ define([
                 }
             }
 
-            // console.log(this.layerNames);
+            console.log(this.layerNames);
 
             for (var key in this.layerNames) {
                 if (this.layerNames.hasOwnProperty(key)) {
@@ -116,7 +117,7 @@ define([
                         this.createSubLayer(layerName);
                     }
 
-                    // this.layers[layerName].prePopulate(wwd);
+                    this.layers[layerName].prePopulate(wwd);
                 }
             }
 
@@ -137,11 +138,18 @@ define([
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
         BlueMarbleLayer.prototype.isPrePopulated = function (wwd) {
-            for (var key in this.layers) {
-                if (this.layers.hasOwnProperty(key) && !this.layers[key].isPrePopulated(wwd)) {
-                    return false;
+            console.log("isPrePopulated");
+            for (var key in this.layerNames) {
+                if (this.layerNames.hasOwnProperty(key)) {
+                    var layerName = this.layerNames[key];
+                    console.log("testing");
+                    console.log(layerName);
+                    if (this.layers.hasOwnProperty(layerName) && !this.layers[layerName].isPrePopulated(wwd)) {
+                        return false;
+                    }
                 }
             }
+            console.log("Done");
             return true;
         };
 

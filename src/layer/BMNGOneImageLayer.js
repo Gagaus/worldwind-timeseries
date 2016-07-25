@@ -7,13 +7,20 @@
  * @version $Id: BMNGOneImageLayer.js 2942 2015-03-30 21:16:36Z tgaskins $
  */
 define([
+        '../util/AbsentResourceList',
+        '../util/Logger',
+        '../cache/MemoryCache',
+        '../render/Texture',
         '../layer/RenderableLayer',
-        // '../util/AbsentResourceList',
         '../geom/Sector',
         '../shapes/SurfaceImage',
         '../util/WWUtil'
     ],
-    function (RenderableLayer,
+    function (AbsentResourceList,
+              Logger,
+              MemoryCache,
+              Texture,
+              RenderableLayer,
               Sector,
               SurfaceImage,
               WWUtil) {
@@ -26,7 +33,7 @@ define([
          * @augments RenderableLayer
          * @classdesc Displays a Blue Marble image layer that spans the entire globe with a single image.
          */
-        var BMNGOneImageLayer = function (img_path) {
+        var BMNGOneImageLayer = function (img_path, imageFormat, cachePath) {
             RenderableLayer.call(this, "Weather Image");
 
             if (!img_path) {
@@ -37,10 +44,17 @@ define([
             var surfaceImage = new SurfaceImage(Sector.FULL_SPHERE,
                 WorldWind.configuration.baseUrl + img_path);
 
-            this.imagePath =  img_path;
+            this.retrievalImageFormat = imageFormat;
+            this.cachePath = cachePath;
+
+            this.imagePath =  WorldWind.configuration.baseUrl + img_path;
 
             this.addRenderable(surfaceImage);
             this.rendered = true;
+
+            this.tileCache = new MemoryCache(500000, 400000);
+            this.currentRetrievals = [];
+            this.absentResourceList = new AbsentResourceList(3, 50e3);
 
             this.pickEnabled = false;
             this.minActiveAltitude = 3e6;
@@ -49,16 +63,12 @@ define([
         BMNGOneImageLayer.prototype = Object.create(RenderableLayer.prototype);
 
         BMNGOneImageLayer.prototype.isPrePopulated = function (wwd) {
-            console.log("blah" + this.imagePath);
-
             if (!wwd) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "TiledImageLayer", "isPrePopulated", "missingWorldWindow"));
             }
 
             // return this.rendered;
-
-            console.log(this.isImageLayerInMemory(wwd.drawContext, this));
             return this.isImageLayerInMemory(wwd.drawContext, this);
         };
 
@@ -72,7 +82,9 @@ define([
             var tile = this;
 
             if (!this.isImageLayerInMemory(dc, tile)) {
-                this.retrieveImage(dc, tile, true); // suppress redraw upon successful retrieval
+                // this.retrieveImage(dc, tile, true); // suppress redraw upon successful retrieval
+                var gl = wwd.drawContext.currentGlContext;
+                dc.gpuResourceCache.retrieveTexture(gl, tile.imagePath);
             }
         };
 
@@ -87,7 +99,7 @@ define([
                     return;
                 }
 
-                var url = this.resourceUrlForTile(tile, this.retrievalImageFormat),
+                var url = WorldWind.configuration.baseUrl + tile.imagePath,
                     image = new Image(),
                     imagePath = tile.imagePath,
                     cache = dc.gpuResourceCache,
@@ -131,6 +143,18 @@ define([
             }
         };
 
-
+        // // Intentionally not documented.
+        // BMNGOneImageLayer.prototype.createTexture = function (dc, tile, image) {
+        //     return new Texture(dc.currentGlContext, image);
+        // };
+        //
+        // // Intentionally not documented.
+        // BMNGOneImageLayer.prototype.removeFromCurrentRetrievals = function (imagePath) {
+        //     var index = this.currentRetrievals.indexOf(imagePath);
+        //     if (index > -1) {
+        //         this.currentRetrievals.splice(index, 1);
+        //     }
+        // };
+        //
         return BMNGOneImageLayer;
     });

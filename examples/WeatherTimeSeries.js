@@ -49,9 +49,6 @@ requirejs(['../src/WorldWind',
                 // wwd.removeLayer(backgroundLayer);
                 return;
             }
-            else {
-                console.log("Not prePopulate");
-            }
 
             // See if the layer is pre-populated now. If so, enable it.
             if (this.prePopulate && blueMarbleLayer.isPrePopulated(wwd)) {
@@ -66,10 +63,15 @@ requirejs(['../src/WorldWind',
                     if (blueMarbleLayer.enabled) {
                         currentIndex = ++currentIndex % WorldWind.BlueMarbleLayer.availableTimes.length;
                         blueMarbleLayer.time = WorldWind.BlueMarbleLayer.availableTimes[currentIndex];
-
+                        console.log('redrawing');
+                        console.log(currentIndex);
                         wwd.redraw();
                     }
                 }, 100);
+            }
+
+            else {
+                console.log("Not prePopulated");
             }
         }, 200);
     });
