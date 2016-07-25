@@ -76,7 +76,7 @@ define([
             this.infiniteInterval = this.startTime.getTime() == this.endTime.getTime();
 
             // Intentionally not documented. The array of sequence increments:
-            // year, month, week, day, hours, minutes, seconds
+            // year, name, week, day, hours, minutes, seconds
             this.period = PeriodicTimeSequence.parsePeriodString(intervalParts[2], false);
         };
 

@@ -163,7 +163,7 @@ define([
             for (var i = 0; i < this.topLevelTiles.length; i++) {
                 var tile = this.topLevelTiles[i];
 
-                if (!this.isTileTextureInMemory(dc, tile)) {
+                if (!this.isImageLayerInMemory(dc, tile)) {
                     this.retrieveTileImage(dc, tile, true); // suppress redraw upon successful retrieval
                 }
             }
@@ -187,7 +187,7 @@ define([
             for (var i = 0, len = this.currentTiles.length; i < len; i++) {
                 var tile = this.currentTiles[i];
 
-                if (!this.isTileTextureInMemory(dc, tile)) {
+                if (!this.isImageLayerInMemory(dc, tile)) {
                     this.retrieveTileImage(dc, tile, true); // suppress redraw upon successful retrieval
                 }
             }
@@ -207,7 +207,7 @@ define([
             }
 
             for (var i = 0; i < this.topLevelTiles.length; i++) {
-                if (!this.isTileTextureInMemory(wwd.drawContext, this.topLevelTiles[i])) {
+                if (!this.isImageLayerInMemory(wwd.drawContext, this.topLevelTiles[i])) {
                     return false;
                 }
             }
@@ -341,7 +341,7 @@ define([
             var ancestorTile = null;
 
             try {
-                if (this.isTileTextureInMemory(dc, tile) || tile.level.levelNumber === 0) {
+                if (this.isImageLayerInMemory(dc, tile) || tile.level.levelNumber === 0) {
                     ancestorTile = this.currentAncestorTile;
                     this.currentAncestorTile = tile;
                 }
@@ -386,7 +386,7 @@ define([
             this.retrieveTileImage(dc, tile);
 
             if (this.currentAncestorTile) {
-                if (this.isTileTextureInMemory(dc, this.currentAncestorTile)) {
+                if (this.isImageLayerInMemory(dc, this.currentAncestorTile)) {
                     // Set up to map the ancestor tile into the current one.
                     tile.fallbackTile = this.currentAncestorTile;
                     tile.fallbackTile.opacity = 1;
@@ -414,7 +414,7 @@ define([
         };
 
         // Intentionally not documented.
-        TiledImageLayer.prototype.isTileTextureInMemory = function (dc, tile) {
+        TiledImageLayer.prototype.isImageLayerInMemory = function (dc, tile) {
             return dc.gpuResourceCache.containsResource(tile.imagePath);
         };
 

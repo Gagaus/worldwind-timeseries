@@ -203,7 +203,7 @@ define(['../../error/ArgumentError',
          * @param {ByteBuffer} buffer The buffer descriptor to read from.
          * @returns {{
          *      fileCode: Number,
-         *      lastModificationDate: {year: number, month: number, day: Number},
+         *      lastModificationDate: {year: number, name: number, day: Number},
          *      numberOfRecords: Number,
          *      headerLength: Number,
          *      recordLength: Number

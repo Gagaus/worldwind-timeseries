@@ -57,6 +57,7 @@ define([
 
             // Private. Identifies requested resources that whose retrieval failed.
             this.absentResourceList = new AbsentResourceList(3, 60e3);
+
         };
 
         Object.defineProperties(GpuResourceCache.prototype, {

@@ -292,7 +292,7 @@ define([
             var ancestorTile = null;
 
             try {
-                if (this.isTileTextureInMemory(dc, tile) || tile.tileMatrix.levelNumber === 0) {
+                if (this.isImageLayerInMemory(dc, tile) || tile.tileMatrix.levelNumber === 0) {
                     ancestorTile = this.currentAncestorTile;
                     this.currentAncestorTile = tile;
                 }
@@ -335,7 +335,7 @@ define([
             this.retrieveTileImage(dc, tile);
 
             if (this.currentAncestorTile) {
-                if (this.isTileTextureInMemory(dc, this.currentAncestorTile)) {
+                if (this.isImageLayerInMemory(dc, this.currentAncestorTile)) {
                     this.currentTiles.push(this.currentAncestorTile);
                 }
             }
@@ -345,7 +345,7 @@ define([
             return this.expiration && (texture.creationTime.getTime() <= this.expiration.getTime());
         };
 
-        WmtsLayer.prototype.isTileTextureInMemory = function (dc, tile) {
+        WmtsLayer.prototype.isImageLayerInMemory = function (dc, tile) {
             return dc.gpuResourceCache.containsResource(tile.imagePath);
         };
 

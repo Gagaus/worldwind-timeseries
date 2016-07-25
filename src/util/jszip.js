@@ -330,7 +330,7 @@ DataReader.prototype = {
         var dostime = this.readInt(4);
         return new Date(
         ((dostime >> 25) & 0x7f) + 1980, // year
-        ((dostime >> 21) & 0x0f) - 1, // month
+        ((dostime >> 21) & 0x0f) - 1, // name
         (dostime >> 16) & 0x1f, // day
         (dostime >> 11) & 0x1f, // hour
         (dostime >> 5) & 0x3f, // minute
