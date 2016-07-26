@@ -13,8 +13,7 @@ define([
         '../render/Texture',
         '../layer/RenderableLayer',
         '../geom/Sector',
-        '../shapes/SurfaceImage',
-        '../util/WWUtil'
+        '../shapes/SurfaceImage'
     ],
     function (AbsentResourceList,
               Logger,
