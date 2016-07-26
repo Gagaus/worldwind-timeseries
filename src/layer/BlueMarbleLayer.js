@@ -9,14 +9,12 @@ define([
         '../error/ArgumentError',
         '../layer/Layer',
         '../util/Logger',
-        '../util/PeriodicTimeSequence',
-        '../layer/RestTiledImageLayer'
+        '../util/PeriodicTimeSequence'
     ],
     function (ArgumentError,
               Layer,
               Logger,
-              PeriodicTimeSequence,
-              RestTiledImageLayer) {
+              PeriodicTimeSequence) {
         "use strict";
 
         /**
@@ -47,8 +45,6 @@ define([
             this.time = initialTime || new Date("2016-07-12");
             this.timeSequence = new PeriodicTimeSequence("2016-07-12/2016-07-18/PT3H");
             this.pathToData = "standalonedata/WORLD-CED/test/";
-            // this.pathToData = "standalonedata/WORLD-CED/PRCP-TCLD-PMSL/";
-
 
             this.configuration = configuration;
 
@@ -81,7 +77,6 @@ define([
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
         BlueMarbleLayer.prototype.prePopulate = function (wwd) {
-            console.log("prePopulating");
             if (!wwd) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "BlueMarbleLayer", "prePopulate", "missingWorldWindow"));
@@ -107,8 +102,6 @@ define([
                 }
             }
 
-            console.log(this.layerNames);
-
             for (var key in this.layerNames) {
                 if (this.layerNames.hasOwnProperty(key)) {
                     var layerName = this.layerNames[key];
@@ -120,8 +113,6 @@ define([
                     this.layers[layerName].prePopulate(wwd);
                 }
             }
-
-            console.log(this.layers);
         };
 
         BlueMarbleLayer.prototype.createSubLayer = function (layerName) {
@@ -138,18 +129,14 @@ define([
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
         BlueMarbleLayer.prototype.isPrePopulated = function (wwd) {
-            console.log("isPrePopulated");
             for (var key in this.layerNames) {
                 if (this.layerNames.hasOwnProperty(key)) {
                     var layerName = this.layerNames[key];
-                    console.log("testing");
-                    console.log(layerName);
                     if (this.layers.hasOwnProperty(layerName) && !this.layers[layerName].isPrePopulated(wwd)) {
                         return false;
                     }
                 }
             }
-            console.log("Done");
             return true;
         };
 

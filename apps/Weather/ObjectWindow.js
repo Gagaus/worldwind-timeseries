@@ -3,20 +3,22 @@
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @version $Id: WorldWind.js 3418 2015-08-22 00:17:05Z tgaskins $
+ * @version $Id: ObjectWindow.js 3418 2015-08-22 00:17:05Z tgaskins $
  */
 define([ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not directory name).
-         './layer/BlueMarbleLayer',
-        './layer/BMNGOneImageLayer'],
-    function (BlueMarbleLayer,
-              BMNGOneImageLayer) {
+         './layer/TimeSeriesLayer',
+        './layer/OneImageLayer',
+        '../../src/util/WWUtil'],
+    function (TimeSeriesLayer,
+              OneImageLayer,
+              WWUtil) {
         "use strict";
         /**
          * This is the top-level World Wind module. It is global.
-         * @exports WorldWind
+         * @exports ObjectWindow
          * @global
          */
-        var WorldWind = {
+        var ObjectWindow = {
             /**
              * The World Wind version number.
              * @default "0.0.0"
@@ -180,7 +182,7 @@ define([ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not direc
             /**
              * The event name of World Wind redraw events.
              */
-            REDRAW_EVENT_TYPE: "WorldWindRedraw",
+            REDRAW_EVENT_TYPE: "ObjectWindowRedraw",
 
             /**
              * Indicates that the related value is specified relative to the globe.
@@ -219,159 +221,9 @@ define([ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not direc
             WEST: "west"
         };
 
-        WorldWind['AbstractError'] = AbstractError;
-        WorldWind['Angle'] = Angle;
-        WorldWind['Annotation'] = Annotation;
-        WorldWind['AnnotationAttributes'] = AnnotationAttributes;
-        WorldWind['ArgumentError'] = ArgumentError;
-        WorldWind['AtmosphereLayer'] = AtmosphereLayer;
-        WorldWind['AtmosphereProgram'] = AtmosphereProgram;
-        WorldWind['BasicProgram'] = BasicProgram;
-        WorldWind['BasicTextureProgram'] = BasicTextureProgram;
-        WorldWind['BasicTimeSequence'] = BasicTimeSequence;
-        WorldWind['BingAerialLayer'] = BingAerialLayer;
-        WorldWind['BingAerialWithLabelsLayer'] = BingAerialWithLabelsLayer;
-        WorldWind['BingRoadsLayer'] = BingRoadsLayer;
-        WorldWind['BingWMSLayer'] = BingWMSLayer;
-        WorldWind['BlueMarbleLayer'] = BlueMarbleLayer;
-        WorldWind['BMNGLandsatLayer'] = BMNGLandsatLayer;
-        WorldWind['BMNGLayer'] = BMNGLayer;
-        WorldWind['BMNGOneImageLayer'] = BMNGOneImageLayer;
-        WorldWind['BoundingBox'] = BoundingBox;
-        WorldWind['ClickRecognizer'] = ClickRecognizer;
-        WorldWind['ColladaLoader'] = ColladaLoader;
-        WorldWind['Color'] = Color;
-        WorldWind['Compass'] = Compass;
-        WorldWind['CompassLayer'] = CompassLayer;
-        WorldWind['CoordinatesDisplayLayer'] = CoordinatesDisplayLayer;
-        WorldWind['DateWW'] = DateWW;
-        WorldWind['DigitalGlobeTiledImageLayer'] = DigitalGlobeTiledImageLayer;
-        WorldWind['DragRecognizer'] = DragRecognizer;
-        WorldWind['DrawContext'] = DrawContext;
-        WorldWind['EarthElevationModel'] = EarthElevationModel;
-        WorldWind['EarthRestElevationModel'] = EarthRestElevationModel;
-        WorldWind['ElevationModel'] = ElevationModel;
-        WorldWind['Font'] = Font;
-        WorldWind['FrameStatistics'] = FrameStatistics;
-        WorldWind['FrameStatisticsLayer'] = FrameStatisticsLayer;
-        WorldWind['FramebufferTexture'] = FramebufferTexture;
-        WorldWind['FramebufferTile'] = FramebufferTile;
-        WorldWind['FramebufferTileController'] = FramebufferTileController;
-        WorldWind['Frustum'] = Frustum;
-        WorldWind['GeographicMesh'] = GeographicMesh;
-        WorldWind['GeographicProjection'] = GeographicProjection;
-        WorldWind['GeographicText'] = GeographicText;
-        WorldWind['GeoJSONParser'] = GeoJSONParser;
-        WorldWind['GeoTiffReader'] = GeoTiffReader;
-        WorldWind['GestureRecognizer'] = GestureRecognizer;
-        WorldWind['Globe'] = Globe;
-        WorldWind['Globe2D'] = Globe2D;
-        WorldWind['GoToAnimator'] = GoToAnimator;
-        WorldWind['GpuProgram'] = GpuProgram;
-        WorldWind['GpuResourceCache'] = GpuResourceCache;
-        WorldWind['GpuShader'] = GpuShader;
-        WorldWind['GroundProgram'] = GroundProgram;
-        WorldWind['HighlightController'] = HighlightController;
-        WorldWind['ImageSource'] = ImageSource;
-        WorldWind['ImageTile'] = ImageTile;
-        WorldWind['Insets'] = Insets;
-        WorldWind['KmlFile'] = KmlFile;
-        WorldWind['LandsatRestLayer'] = LandsatRestLayer;
-        WorldWind['Layer'] = Layer;
-        WorldWind['Level'] = Level;
-        WorldWind['LevelRowColumnUrlBuilder'] = LevelRowColumnUrlBuilder;
-        WorldWind['LevelSet'] = LevelSet;
-        WorldWind['Line'] = Line;
-        WorldWind['Location'] = Location;
-        WorldWind['Logger'] = Logger;
-        WorldWind['LookAtNavigator'] = LookAtNavigator;
-        WorldWind['Matrix'] = Matrix;
-        WorldWind['MemoryCache'] = MemoryCache;
-        WorldWind['MemoryCacheListener'] = MemoryCacheListener;
-        WorldWind['MercatorTiledImageLayer'] = MercatorTiledImageLayer;
-        WorldWind['Navigator'] = Navigator;
-        WorldWind['NavigatorState'] = NavigatorState;
-        WorldWind['NominatimGeocoder'] = NominatimGeocoder;
-        WorldWind['NotYetImplementedError'] = NotYetImplementedError;
-        WorldWind['Offset'] = Offset;
-        WorldWind['OpenStreetMapImageLayer'] = OpenStreetMapImageLayer;
-        WorldWind['PanRecognizer'] = PanRecognizer;
-        WorldWind['Path'] = Path;
-        WorldWind['PeriodicTimeSequence'] = PeriodicTimeSequence;
-        WorldWind['PickedObject'] = PickedObject;
-        WorldWind['PickedObjectList'] = PickedObjectList;
-        WorldWind['PinchRecognizer'] = PinchRecognizer;
-        WorldWind['Placemark'] = Placemark;
-        WorldWind['PlacemarkAttributes'] = PlacemarkAttributes;
-        WorldWind['Plane'] = Plane;
-        WorldWind['Polygon'] = Polygon;
-        WorldWind['Position'] = Position;
-        WorldWind['ProjectionEquirectangular'] = ProjectionEquirectangular;
-        WorldWind['ProjectionGnomonic'] = ProjectionGnomonic;
-        WorldWind['ProjectionMercator'] = ProjectionMercator;
-        WorldWind['ProjectionPolarEquidistant'] = ProjectionPolarEquidistant;
-        WorldWind['ProjectionUPS'] = ProjectionUPS;
-        WorldWind['ProjectionWgs84'] = ProjectionWgs84;
-        WorldWind['Rectangle'] = Rectangle;
-        WorldWind['Renderable'] = Renderable;
-        WorldWind['RenderableLayer'] = RenderableLayer;
-        WorldWind['RestTiledImageLayer'] = RestTiledImageLayer;
-        WorldWind['RotationRecognizer'] = RotationRecognizer;
-        WorldWind['ScreenText'] = ScreenText;
-        WorldWind['ScreenImage'] = ScreenImage;
-        WorldWind['Sector'] = Sector;
-        WorldWind['ShapeAttributes'] = ShapeAttributes;
-        WorldWind['Shapefile'] = Shapefile;
-        WorldWind['ShowTessellationLayer'] = ShowTessellationLayer;
-        WorldWind['SkyProgram'] = SkyProgram;
-        WorldWind['SurfaceImage'] = SurfaceImage;
-        WorldWind['SurfaceCircle'] = SurfaceCircle;
-        WorldWind['SurfaceEllipse'] = SurfaceEllipse;
-        WorldWind['SurfacePolygon'] = SurfacePolygon;
-        WorldWind['SurfacePolyline'] = SurfacePolyline;
-        WorldWind['SurfaceRectangle'] = SurfaceRectangle;
-        WorldWind['SurfaceRenderable'] = SurfaceRenderable;
-        WorldWind['SurfaceSector'] = SurfaceSector;
-        WorldWind['SurfaceShape'] = SurfaceShape;
-        WorldWind['SurfaceShapeTile'] = SurfaceShapeTile;
-        WorldWind['SurfaceShapeTileBuilder'] = SurfaceShapeTileBuilder;
-        WorldWind['SurfaceTile'] = SurfaceTile;
-        WorldWind['SurfaceTileRenderer'] = SurfaceTileRenderer;
-        WorldWind['SurfaceTileRendererProgram'] = SurfaceTileRendererProgram;
-        WorldWind['TapRecognizer'] = TapRecognizer;
-        WorldWind['TectonicPlatesLayer'] = TectonicPlatesLayer;
-        WorldWind['Terrain'] = Terrain;
-        WorldWind['TerrainTile'] = TerrainTile;
-        WorldWind['TerrainTileList'] = TerrainTileList;
-        WorldWind['Tessellator'] = Tessellator;
-        WorldWind['Text'] = Text;
-        WorldWind['TextAttributes'] = TextAttributes;
-        WorldWind['TextSupport'] = TextSupport;
-        WorldWind['Texture'] = Texture;
-        WorldWind['TextureTile'] = TextureTile;
-        WorldWind['Tile'] = Tile;
-        WorldWind['TiledImageLayer'] = TiledImageLayer;
-        WorldWind['TileFactory'] = TileFactory;
-        WorldWind['TiltRecognizer'] = TiltRecognizer;
-        WorldWind['Touch'] = Touch;
-        WorldWind['TriangleMesh'] = TriangleMesh;
-        WorldWind['UnsupportedOperationError'] = UnsupportedOperationError;
-        WorldWind['Vec2'] = Vec2;
-        WorldWind['Vec3'] = Vec3;
-        WorldWind['ViewControlsLayer'] = ViewControlsLayer;
-        WorldWind['WmsCapabilities'] = WmsCapabilities;
-        WorldWind['WmsLayer'] = WmsLayer;
-        WorldWind['WmsLayerCapabilities'] = WmsLayerCapabilities;
-        WorldWind['WmsTimeDimensionedLayer'] = WmsTimeDimensionedLayer;
-        WorldWind['WmsUrlBuilder'] = WmsUrlBuilder;
-        WorldWind['WmtsCapabilities'] = WmtsCapabilities;
-        WorldWind['WmtsLayer'] = WmtsLayer;
-        WorldWind['WmtsLayerCapabilities'] = WmtsLayerCapabilities;
-        WorldWind['WWMath'] = WWMath;
-        WorldWind['WWMessage'] = WWMessage;
-        WorldWind['WWUtil'] = WWUtil;
-        WorldWind['WorldWindow'] = WorldWindow;
-        WorldWind['ZeroElevationModel'] = ZeroElevationModel;
+        ObjectWindow['TimeSeriesLayer'] = TimeSeriesLayer;
+        ObjectWindow['OneImageLayer'] = OneImageLayer;
+        ObjectWindow['WWUtil'] = WWUtil;
 
         /**
          * Holds configuration parameters for World Wind. Applications may modify these parameters prior to creating
@@ -383,7 +235,7 @@ define([ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not direc
          * </ul>
          * @type {{gpuCacheSize: number}}
          */
-        WorldWind.configuration = {
+        ObjectWindow.configuration = {
             gpuCacheSize: 500e6,
             baseUrl: (WWUtil.worldwindlibLocation()) || (WWUtil.currentUrlSansFilePart() + '/../')
         };
@@ -393,10 +245,10 @@ define([ // PLEASE KEEP ALL THIS IN ALPHABETICAL ORDER BY MODULE NAME (not direc
          * @type {String}
          * @default null
          */
-        WorldWind.BingMapsKey = null;
+        ObjectWindow.BingMapsKey = null;
 
-        window.WorldWind = WorldWind;
+        window.ObjectWindow = ObjectWindow;
 
-        return WorldWind;
+        return ObjectWindow;
     }
 );

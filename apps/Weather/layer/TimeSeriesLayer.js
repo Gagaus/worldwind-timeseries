@@ -3,13 +3,13 @@
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @exports BlueMarbleLayer
+ * @exports TimeSeriesLayer
  */
 define([
-        '../error/ArgumentError',
-        '../layer/Layer',
-        '../util/Logger',
-        '../util/PeriodicTimeSequence'
+        '../../../src/error/ArgumentError',
+        '../../../src/layer/Layer',
+        '../../../src/util/Logger',
+        '../../../src/util/PeriodicTimeSequence'
     ],
     function (ArgumentError,
               Layer,
@@ -19,7 +19,7 @@ define([
 
         /**
          * Constructs a Blue Marble layer.
-         * @alias BlueMarbleLayer
+         * @alias TimeSeriesLayer
          * @constructor
          * @augments Layer
          * @classdesc Represents the 12 name collection of Blue Marble Next Generation imagery for the year 2004.
@@ -33,8 +33,8 @@ define([
          * See {@link RestTiledImageLayer} for a description of its contents. May be null, in which case default
          * values are used.
          */
-        var BlueMarbleLayer;
-        BlueMarbleLayer = function (displayName, initialTime, configuration) {
+        var TimeSeriesLayer;
+        TimeSeriesLayer = function (displayName, initialTime, configuration) {
             Layer.call(this, displayName || "Blue Marble");
 
             /**
@@ -57,14 +57,14 @@ define([
             this.serverAddress = null;
         };
 
-        BlueMarbleLayer.prototype = Object.create(Layer.prototype);
+        TimeSeriesLayer.prototype = Object.create(Layer.prototype);
 
         /**
          * Indicates the available times for this layer.
          * @type {Date[]}
          * @readonly
          */
-        BlueMarbleLayer.availableTimes = [];
+        TimeSeriesLayer.availableTimes = [];
 
         /**
          * Initiates retrieval of this layer's level 0 images for all sub-layers. Use
@@ -76,19 +76,19 @@ define([
          * @param {WorldWindow} wwd The world window for which to pre-populate this layer.
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
-        BlueMarbleLayer.prototype.prePopulate = function (wwd) {
+        TimeSeriesLayer.prototype.prePopulate = function (wwd) {
             if (!wwd) {
                 throw new ArgumentError(
-                    Logger.logMessage(Logger.LEVEL_SEVERE, "BlueMarbleLayer", "prePopulate", "missingWorldWindow"));
+                    Logger.logMessage(Logger.LEVEL_SEVERE, "TimeSeriesLayer", "prePopulate", "missingWorldWindow"));
             }
 
             var period = PeriodicTimeSequence.incrementTime(this.timeSequence.currentTime,
                     this.timeSequence.period) - this.timeSequence.currentTime;
             var length = this.timeSequence.intervalMilliseconds/period + 1;
 
-            if (BlueMarbleLayer.availableTimes.length != length) {
+            if (TimeSeriesLayer.availableTimes.length != length) {
                 for (var i = 0; i < length ; i++)  {
-                    BlueMarbleLayer.availableTimes[i] = this.timeSequence.currentTime;
+                    TimeSeriesLayer.availableTimes[i] = this.timeSequence.currentTime;
                     var name;
                     if (i  < 10) {
                         name = "0" + i.toString();
@@ -115,7 +115,7 @@ define([
             }
         };
 
-        BlueMarbleLayer.prototype.createSubLayer = function (layerName) {
+        TimeSeriesLayer.prototype.createSubLayer = function (layerName) {
             var dataPath = this.pathToData + layerName + '.png';
             this.layers[layerName] = new WorldWind.BMNGOneImageLayer(dataPath);
         };
@@ -128,7 +128,7 @@ define([
          * @returns {Boolean} true if all level 0 images have been retrieved, otherwise false.
          * @throws {ArgumentError} If the specified world window is null or undefined.
          */
-        BlueMarbleLayer.prototype.isPrePopulated = function (wwd) {
+        TimeSeriesLayer.prototype.isPrePopulated = function (wwd) {
             for (var key in this.layerNames) {
                 if (this.layerNames.hasOwnProperty(key)) {
                     var layerName = this.layerNames[key];
@@ -140,7 +140,7 @@ define([
             return true;
         };
 
-        BlueMarbleLayer.prototype.doRender = function (dc) {
+        TimeSeriesLayer.prototype.doRender = function (dc) {
             var layer = this.layers[this.layerNames[this.time]];
             layer.opacity = this.opacity;
             if (this.detailControl) {
@@ -152,5 +152,5 @@ define([
             this.inCurrentFrame = layer.inCurrentFrame;
         };
 
-        return BlueMarbleLayer;
+        return TimeSeriesLayer;
     });

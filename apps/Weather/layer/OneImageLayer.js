@@ -3,18 +3,18 @@
  * National Aeronautics and Space Administration. All Rights Reserved.
  */
 /**
- * @exports BMNGOneImageLayer
- * @version $Id: BMNGOneImageLayer.js 2942 2015-03-30 21:16:36Z tgaskins $
+ * @exports OneImageLayer
+ * @version $Id: OneImageLayer.js 2942 2015-03-30 21:16:36Z tgaskins $
  */
 define([
-        '../util/AbsentResourceList',
-        '../util/Logger',
-        '../cache/MemoryCache',
-        '../render/Texture',
-        '../layer/RenderableLayer',
-        '../geom/Sector',
-        '../shapes/SurfaceImage',
-        '../util/WWUtil'
+        '../../../src/util/AbsentResourceList',
+        '../../../src/util/Logger',
+        '../../../src/cache/MemoryCache',
+        '../../../src/render/Texture',
+        '../../../src/layer/RenderableLayer',
+        '../../../src/geom/Sector',
+        '../../../src/shapes/SurfaceImage',
+        '../../../src/util/WWUtil'
     ],
     function (AbsentResourceList,
               Logger,
@@ -27,12 +27,12 @@ define([
 
         /**
          * Constructs a Blue Marble image layer that spans the entire globe.
-         * @alias BMNGOneImageLayer
+         * @alias OneImageLayer
          * @constructor
          * @augments RenderableLayer
          * @classdesc Displays a Blue Marble image layer that spans the entire globe with a single image.
          */
-        var BMNGOneImageLayer = function (img_path) {
+        var OneImageLayer = function (img_path) {
             RenderableLayer.call(this, "Weather Image");
 
             if (!img_path) {
@@ -52,9 +52,9 @@ define([
             this.minActiveAltitude = 3e6;
         };
 
-        BMNGOneImageLayer.prototype = Object.create(RenderableLayer.prototype);
+        OneImageLayer.prototype = Object.create(RenderableLayer.prototype);
 
-        BMNGOneImageLayer.prototype.isPrePopulated = function (wwd) {
+        OneImageLayer.prototype.isPrePopulated = function (wwd) {
             if (!wwd) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "TiledImageLayer", "isPrePopulated", "missingWorldWindow"));
@@ -63,7 +63,7 @@ define([
             return this.isImageLayerInMemory(wwd.drawContext, this);
         };
 
-        BMNGOneImageLayer.prototype.prePopulate = function (wwd) {
+        OneImageLayer.prototype.prePopulate = function (wwd) {
             if (!wwd) {
                 throw new ArgumentError(
                     Logger.logMessage(Logger.LEVEL_SEVERE, "TiledImageLayer", "prePopulate", "missingWorldWindow"));
@@ -77,9 +77,9 @@ define([
         };
 
         // Intentionally not documented.
-        BMNGOneImageLayer.prototype.isImageLayerInMemory = function (dc, tile) {
+        OneImageLayer.prototype.isImageLayerInMemory = function (dc, tile) {
             return dc.gpuResourceCache.containsResource(tile.imagePath);
         };
 
-        return BMNGOneImageLayer;
+        return OneImageLayer;
     });

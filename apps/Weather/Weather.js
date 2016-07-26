@@ -7,8 +7,10 @@
  */
 
 requirejs(['../../src/WorldWind',
+        'ObjectWindow',
         '../../examples/LayerManager'],
     function (ww,
+              ObjectWindow,
               LayerManager) {
         "use strict";
 
@@ -16,16 +18,16 @@ requirejs(['../../src/WorldWind',
 
         var wwd = new WorldWind.WorldWindow("canvasOne");
 
-        var backgroundLayer = new WorldWind.BMNGOneImageLayer();
+        var backgroundLayer = new ObjectWindow.OneImageLayer();
         backgroundLayer.hide = true; // Don't show it in the layer manager.
         wwd.addLayer(backgroundLayer);
 
         // Create the Blue Marble layer and add it to the World Window's layer list. Disable it until its images
         // are preloaded, which is initiated below.
-        var blueMarbleLayer = new WorldWind.BlueMarbleLayer(null, null);
-        blueMarbleLayer.enabled = false;
-        blueMarbleLayer.showSpinner = true;
-        wwd.addLayer(blueMarbleLayer);
+        var timeseriesLayer = new ObjectWindow.TimeSeriesLayer(null, null);
+        timeseriesLayer.enabled = false;
+        timeseriesLayer.showSpinner = true;
+        wwd.addLayer(timeseriesLayer);
 
         // Create a compass and view controls.
         wwd.addLayer(new WorldWind.CompassLayer());
@@ -44,25 +46,24 @@ requirejs(['../../src/WorldWind',
             if (!this.prePopulate) {
                 // Pre-populate the layer's sub-layers so that we don't see flashing of their image tiles as they're
                 // loaded.
-                blueMarbleLayer.prePopulate(wwd);
+                timeseriesLayer.prePopulate(wwd);
                 this.prePopulate = true;
-                // wwd.removeLayer(backgroundLayer);
                 return;
             }
 
             // See if the layer is pre-populated now. If so, enable it.
-            if (this.prePopulate && blueMarbleLayer.isPrePopulated(wwd)) {
-                blueMarbleLayer.enabled = true;
-                blueMarbleLayer.showSpinner = false;
+            if (this.prePopulate && timeseriesLayer.isPrePopulated(wwd)) {
+                timeseriesLayer.enabled = true;
+                timeseriesLayer.showSpinner = false;
                 window.clearInterval(prePopulateInterval);
                 layerManger.synchronizeLayerList();
 
                 // Increment the Blue Marble layer's time at a specified frequency.
                 var currentIndex = 0;
                 window.setInterval(function () {
-                    if (blueMarbleLayer.enabled) {
-                        currentIndex = ++currentIndex % WorldWind.BlueMarbleLayer.availableTimes.length;
-                        blueMarbleLayer.time = WorldWind.BlueMarbleLayer.availableTimes[currentIndex];
+                    if (timeseriesLayer.enabled) {
+                        currentIndex = ++currentIndex % ObjectWindow.TimeSeriesLayer.availableTimes.length;
+                        timeseriesLayer.time = ObjectWindow.TimeSeriesLayer.availableTimes[currentIndex];
                         wwd.redraw();
                     }
                 }, 100);
