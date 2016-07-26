@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/WebWorldWind.iml" filepath="$PROJECT_DIR$/.idea/WebWorldWind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/worldwind-timeseries.iml" filepath="$PROJECT_DIR$/.idea/worldwind-timeseries.iml" />
     </modules>
   </component>
 </project>

@@ -2,16 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83d70941-de05-4835-a22e-ebd395c9f5bf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/Weather/WeatherTimeSeries.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/Weather/layer/BMNGOneImageLayer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/Weather/layer/BlueMarbleLayer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/WeatherTimeSeries.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/WeatherTimeSeries.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/WeatherTimeSeries.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/Weather/ObjectWindow.js" afterPath="$PROJECT_DIR$/apps/Weather/ObjectWindow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WorldWind.js" afterPath="$PROJECT_DIR$/src/WorldWind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layer/BMNGOneImageLayer.js" afterPath="$PROJECT_DIR$/src/layer/BMNGOneImageLayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layer/BlueMarbleLayer.js" afterPath="$PROJECT_DIR$/src/layer/BlueMarbleLayer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/WebWorldWind.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/WebWorldWind_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/AnalyticalSurface.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Annotations.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Atmosphere.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/BasicExample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/BingLayers.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/BlueMarbleTimeSeries.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Configuration.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/CustomPlacemark.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/DeepPicking.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/DigitalGlobe.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Explorer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GeoJSON.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GeoTiffExample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GeographicMeshes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GeographicText.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/GoToLocation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/KmlExample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/LibraryExample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/NEO.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/OpenStreetMap.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/ParseUrlArguments.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Paths.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/PickAllShapesInRegion.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/PlacemarksAndPicking.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Polygons.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/RefreshImagery.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/ScreenImage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/ScreenText.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Shapefiles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/SimplestExample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Standalone.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/SubSurface.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/SurfaceImage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/SurfaceShapes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/TriangleMeshes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/USGSSlabs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/USGSWells_html.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/VeryManyPaths.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/VeryManyPolygons.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/WmsExplorer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/jsTestDriver_conf.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WebWorldWind.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +73,8 @@
       <file leaf-file-name="Weather.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Weather.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="468">
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -44,35 +83,19 @@
       <file leaf-file-name="Weather.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/Weather/Weather.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectWindow.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ObjectWindow.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/Weather/ObjectWindow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4356">
-              <caret line="242" column="11" selection-start-line="242" selection-start-column="11" selection-end-line="242" selection-end-column="11" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeSeriesLayer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/Weather/layer/TimeSeriesLayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,9 +146,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
     <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="width" value="1855" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -152,47 +176,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -202,11 +211,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -220,11 +229,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebWorldWind" />
+              <option name="myItemId" value="worldwind-timeseries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -242,6 +251,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,7 +264,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.Weather.html">
-    <configuration default="false" name="Weather.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" uri="http://localhost:63342/WebWorldWind/apps/Weather.html">
+    <configuration default="false" name="Weather.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:63342/worldwind-timeseries/apps/Weather.html">
       <method />
     </configuration>
     <configuration default="false" name="AnnotationController.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="AnnotationController.js" working-dir="$PROJECT_DIR$/examples">
@@ -273,13 +283,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
-      <setting name="configLocationType" value="CONFIG_FILE" />
-      <setting name="settingsFile" value="" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
@@ -320,50 +323,9 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="43">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.AnalyticalSurface" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.Annotations" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.Atmosphere" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.BasicExample" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.BingLayers" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.BlueMarbleTimeSeries" />
-      <item index="6" class="java.lang.String" itemvalue="JavaScript Debug.Configuration" />
-      <item index="7" class="java.lang.String" itemvalue="JavaScript Debug.CustomPlacemark" />
-      <item index="8" class="java.lang.String" itemvalue="JavaScript Debug.DeepPicking" />
-      <item index="9" class="java.lang.String" itemvalue="JavaScript Debug.DigitalGlobe" />
-      <item index="10" class="java.lang.String" itemvalue="JavaScript Debug.Explorer" />
-      <item index="11" class="java.lang.String" itemvalue="JavaScript Debug.GeoJSON" />
-      <item index="12" class="java.lang.String" itemvalue="JavaScript Debug.GeoTiffExample" />
-      <item index="13" class="java.lang.String" itemvalue="JavaScript Debug.GeographicMeshes" />
-      <item index="14" class="java.lang.String" itemvalue="JavaScript Debug.GeographicText" />
-      <item index="15" class="java.lang.String" itemvalue="JavaScript Debug.GoToLocation" />
-      <item index="16" class="java.lang.String" itemvalue="JavaScript Debug.KmlExample" />
-      <item index="17" class="java.lang.String" itemvalue="JavaScript Debug.LibraryExample" />
-      <item index="18" class="java.lang.String" itemvalue="JavaScript Debug.NEO" />
-      <item index="19" class="java.lang.String" itemvalue="JavaScript Debug.OpenStreetMap" />
-      <item index="20" class="java.lang.String" itemvalue="JavaScript Debug.ParseUrlArguments" />
-      <item index="21" class="java.lang.String" itemvalue="JavaScript Debug.Paths" />
-      <item index="22" class="java.lang.String" itemvalue="JavaScript Debug.PickAllShapesInRegion" />
-      <item index="23" class="java.lang.String" itemvalue="JavaScript Debug.PlacemarksAndPicking" />
-      <item index="24" class="java.lang.String" itemvalue="JavaScript Debug.Polygons" />
-      <item index="25" class="java.lang.String" itemvalue="JavaScript Debug.RefreshImagery" />
-      <item index="26" class="java.lang.String" itemvalue="JavaScript Debug.ScreenImage" />
-      <item index="27" class="java.lang.String" itemvalue="JavaScript Debug.ScreenText" />
-      <item index="28" class="java.lang.String" itemvalue="JavaScript Debug.Shapefiles" />
-      <item index="29" class="java.lang.String" itemvalue="JavaScript Debug.SimplestExample" />
-      <item index="30" class="java.lang.String" itemvalue="JavaScript Debug.Standalone" />
-      <item index="31" class="java.lang.String" itemvalue="JavaScript Debug.SubSurface" />
-      <item index="32" class="java.lang.String" itemvalue="JavaScript Debug.SurfaceImage" />
-      <item index="33" class="java.lang.String" itemvalue="JavaScript Debug.SurfaceShapes" />
-      <item index="34" class="java.lang.String" itemvalue="JavaScript Debug.TriangleMeshes" />
-      <item index="35" class="java.lang.String" itemvalue="JavaScript Debug.USGSSlabs" />
-      <item index="36" class="java.lang.String" itemvalue="JavaScript Debug.USGSWells.html" />
-      <item index="37" class="java.lang.String" itemvalue="JavaScript Debug.VeryManyPaths" />
-      <item index="38" class="java.lang.String" itemvalue="JavaScript Debug.VeryManyPolygons" />
-      <item index="39" class="java.lang.String" itemvalue="JavaScript Debug.WmsExplorer" />
-      <item index="40" class="java.lang.String" itemvalue="JsTestDriver.jsTestDriver.conf" />
-      <item index="41" class="java.lang.String" itemvalue="JavaScript Debug.Weather.html" />
-      <item index="42" class="java.lang.String" itemvalue="Node.js.AnnotationController.js" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Weather.html" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.AnnotationController.js" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -418,17 +380,18 @@
       <workItem from="1469463415399" duration="1094000" />
       <workItem from="1469464589323" duration="15873000" />
       <workItem from="1469548710229" duration="2818000" />
+      <workItem from="1469552003512" duration="1353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113189000" />
+    <option name="totallyTimeSpent" value="114542000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
+    <frame x="65" y="24" width="1855" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.187062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.41041666" order="7" side_tool="true" content_ui="tabs" />
@@ -438,7 +401,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27076924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27066302" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -666,7 +629,7 @@
         <state relative-caret-position="324">
           <caret line="77" column="40" selection-start-line="77" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
             <element signature="e#6355#6453#0" expanded="false" />
             <element signature="e#6464#7221#0" expanded="false" />
             <element signature="e#7285#7983#0" expanded="false" />
@@ -748,38 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/BMNGOneImageLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="38" column="68" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/BlueMarbleLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/WeatherTimeSeries.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather/WeatherTimeSeries.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/BMNGOneImageLayer.js" />
+    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/BlueMarbleLayer.js" />
+    <entry file="file://$PROJECT_DIR$/apps/WeatherTimeSeries.html" />
+    <entry file="file://$PROJECT_DIR$/apps/Weather/WeatherTimeSeries.js" />
     <entry file="file://$PROJECT_DIR$/src/WorldWindow.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -788,59 +723,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WorldWind.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
           <caret line="794" column="32" selection-start-line="794" selection-start-column="32" selection-end-line="794" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/OneImageLayer.js" />
+    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/TimeSeriesLayer.js" />
+    <entry file="file://$PROJECT_DIR$/apps/Weather.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/Weather/Weather.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/Weather/ObjectWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4356">
-          <caret line="242" column="11" selection-start-line="242" selection-start-column="11" selection-end-line="242" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/OneImageLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/Weather/layer/TimeSeriesLayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
